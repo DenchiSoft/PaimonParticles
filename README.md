@@ -1,6 +1,6 @@
 # PaimonParticles
 
-My attempt to recreate the super pretty constellation-like particle effect used for Paimon from [Genshin Impact](https://en.wikipedia.org/wiki/Genshin_Impact). Feel free to use this in your own projects.
+My attempt to recreate the super pretty constellation-like particle effect used for Paimon from [Genshin Impact](https://en.wikipedia.org/wiki/Genshin_Impact) in Unity. Feel free to use this in your own projects.
 
 Web demo can be found here: https://denchi.itch.io/paimon-particle-demo
 
