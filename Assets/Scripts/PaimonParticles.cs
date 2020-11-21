@@ -60,10 +60,6 @@ public class PaimonParticles : MonoBehaviour
             Color particleColor = particleColors[i];
             Color lineStartColor = particleColor;
 
-            float lineStartColorOriginalAlpha = Mathf.LerpUnclamped(lineRendererStartColor.a, particleColor.a, 0.95f);
-
-            lineStartColor.a = lineStartColorOriginalAlpha;
-
             float lineStartWidth = Mathf.LerpUnclamped(lineRendererStartWidth, particleSizes[i], 0.15f);
 
             if (i + 1 < lineParticleSystem.particleCount)
@@ -82,13 +78,13 @@ public class PaimonParticles : MonoBehaviour
                 lr.enabled = true;
                 lr.SetPosition(0, particlePositions[i]);
                 lr.SetPosition(1, particlePositions[i + 1]);
-                lineStartColor.a = lineStartColorOriginalAlpha;
+                lineStartColor.a = particleColor.a;
                 lr.startColor = lineStartColor;
 
                 particleColor = particleColors[i + 1];
 
                 Color lineEndColour = particleColor;
-                lineEndColour.a = Mathf.LerpUnclamped(lineRendererEndColor.a, particleColor.a, 1);
+                lineEndColour.a = particleColor.a;
             
                 lr.endColor = lineEndColour;
                 lr.startWidth = lineStartWidth;
